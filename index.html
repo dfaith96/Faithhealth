@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faith Health | AI Copilots & Agents for Psychiatry</title>
+  <meta name="description" content="Faith Health builds AI copilots and agents for psychiatry teams making mental healthcare affordable, accessible, and clinically effective.">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Faith Health home">
+      <img class="brand-logo" src="faith-health-logo.svg" alt="" aria-hidden="true">
+      <span>Faith Health</span>
+    </a>
+    <nav class="nav-links" aria-label="Site sections">
+      <a href="#platform">Platform</a>
+      <a href="#features">Features</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#clinical">Clinical</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-action" href="#contact">Request access</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Copilots & Agents for Psychiatry</p>
+          <h1 id="hero-title">Faith Health</h1>
+          <p class="hero-lede">Come make mental healthcare affordable, accessible, and clinically effective with AI that supports psychiatrists, therapists, care coordinators, and patients between visits.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Join the pilot</a>
+            <a class="button secondary" href="#platform">Explore platform</a>
+          </div>
+        </div>
+
+        <aside class="copilot-panel" aria-label="Faith clinical copilot preview">
+          <div class="panel-topbar">
+            <span class="status-dot"></span>
+            <span>Clinical Copilot</span>
+            <span class="secure-label">HIPAA-ready workflow</span>
+          </div>
+          <div class="patient-card">
+            <div>
+              <span class="label">Next patient</span>
+              <strong>Maya R.</strong>
+              <small>28, follow-up psychiatry visit</small>
+            </div>
+            <span class="risk-badge">moderate risk</span>
+          </div>
+          <div class="copilot-summary">
+            <div>
+              <span class="label">Primary concern</span>
+              <strong>Depressive symptoms worsening</strong>
+            </div>
+            <div>
+              <span class="label">Medication context</span>
+              <strong>Sertraline refill gap: 9 days</strong>
+            </div>
+          </div>
+          <svg class="care-map" viewBox="0 0 420 150" role="img" aria-label="Clinical copilot care pathway from intake signal to clinician review">
+            <defs>
+              <linearGradient id="careGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1f7a58"></stop>
+                <stop offset="100%" stop-color="#155e63"></stop>
+              </linearGradient>
+            </defs>
+            <path class="care-line" d="M68 76 H162 C184 76 184 38 206 38 H264 C286 38 286 112 308 112 H354"></path>
+            <g class="care-node">
+              <circle cx="68" cy="76" r="28"></circle>
+              <text x="68" y="72">PHQ</text>
+              <text x="68" y="88">+5</text>
+            </g>
+            <g class="care-node">
+              <circle cx="206" cy="38" r="28"></circle>
+              <text x="206" y="35">Med</text>
+              <text x="206" y="51">Gap</text>
+            </g>
+            <g class="care-node alert">
+              <circle cx="308" cy="112" r="28"></circle>
+              <text x="308" y="108">Risk</text>
+              <text x="308" y="124">Flag</text>
+            </g>
+            <g class="care-node final">
+              <circle cx="354" cy="112" r="28"></circle>
+              <text x="354" y="108">MD</text>
+              <text x="354" y="124">Review</text>
+            </g>
+          </svg>
+          <div class="timeline">
+            <article>
+              <span>08:12</span>
+              <p>PHQ-9 rose from 11 to 16 after medication disruption.</p>
+            </article>
+            <article>
+              <span>08:18</span>
+              <p>Agent prepared visit brief with adherence, sleep, safety, and social context.</p>
+            </article>
+            <article>
+              <span>08:20</span>
+              <p>Copilot suggests structured safety check and follow-up in 72 hours.</p>
+            </article>
+          </div>
+          <div class="copilot-actions" aria-label="Recommended copilot actions">
+            <span>Recommended actions</span>
+            <button type="button">Safety check</button>
+            <button type="button">Refill review</button>
+            <button type="button">72h follow-up</button>
+          </div>
+          <div class="panel-footer">
+            <span>Draft note ready</span>
+            <button type="button" id="briefButton">View brief</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="metrics-band" aria-label="Faith Health impact targets">
+      <div>
+        <strong>40%</strong>
+        <span>less admin time</span>
+      </div>
+      <div>
+        <strong>24/7</strong>
+        <span>between-visit support</span>
+      </div>
+      <div>
+        <strong>2x</strong>
+        <span>care-team capacity</span>
+      </div>
+      <div>
+        <strong>Clinical</strong>
+        <span>human-supervised AI</span>
+      </div>
+    </section>
+
+    <section class="section" id="platform">
+      <div class="section-heading">
+        <p class="eyebrow">Platform</p>
+        <h2>Psychiatry workflows handled before, during, and after the visit.</h2>
+        <p class="platform-lede">Faith Health connects patient-reported information, clinical notes, symptom measures, medication history, and care-team tasks into one supervised AI workflow. The platform is designed to reduce administrative burden while giving clinicians clearer, safer context for decisions.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="icon">01</span>
+          <h3>Intake Copilot</h3>
+          <p>Turns patient history, screeners, prior notes, referral context, and social determinants into a clean psychiatric intake summary that clinicians can review before the first visit.</p>
+          <ul class="platform-list">
+            <li>Structured presenting concerns and symptom history</li>
+            <li>Prior diagnosis, medication, therapy, and hospitalization summary</li>
+            <li>PHQ-9, GAD-7, sleep, substance use, and functional impact capture</li>
+            <li>Referral triage notes and suggested appointment preparation</li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <span class="icon">02</span>
+          <h3>Visit Agent</h3>
+          <p>Surfaces risk signals, medication context, differential prompts, and measurement-based care tasks during the session, without taking the clinician out of control.</p>
+          <ul class="platform-list">
+            <li>Pre-visit clinical brief with changes since last appointment</li>
+            <li>Medication adherence, refill gaps, side effects, and response patterns</li>
+            <li>Safety prompts for deterioration, suicidality, and crisis language</li>
+            <li>Draft assessment, plan, and follow-up tasks for clinician review</li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <span class="icon">03</span>
+          <h3>Care Follow-up</h3>
+          <p>Checks in between appointments, escalates safety concerns, and keeps the care team informed without creating another overloaded inbox.</p>
+          <ul class="platform-list">
+            <li>Automated symptom, mood, sleep, and adherence check-ins</li>
+            <li>Escalation queues for urgent or clinically meaningful responses</li>
+            <li>Patient education and appointment preparation messages</li>
+            <li>Closed-loop follow-up tasks assigned to the right care-team owner</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="platform-architecture" aria-label="Faith Health platform architecture">
+        <article>
+          <span>Data Layer</span>
+          <h3>One longitudinal view</h3>
+          <p>Patient-reported outcomes, notes, medication events, care tasks, and check-ins are organized into a timeline that makes clinical change easier to see.</p>
+        </article>
+        <article>
+          <span>Agent Layer</span>
+          <h3>Purpose-built psychiatric agents</h3>
+          <p>Agents handle intake preparation, visit support, follow-up routing, documentation assistance, and operational reporting with defined responsibilities.</p>
+        </article>
+        <article>
+          <span>Guardrail Layer</span>
+          <h3>Human-reviewed boundaries</h3>
+          <p>High-risk events, medication-related actions, treatment-plan changes, and sensitive communication require clinician review and auditability.</p>
+        </article>
+        <article>
+          <span>Integration Layer</span>
+          <h3>Works with clinic systems</h3>
+          <p>Designed to connect with EHR, scheduling, messaging, telehealth, billing handoff, and analytics workflows during implementation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section features-section" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">Product & Services</p>
+        <h2>Everything psychiatry teams need to launch AI-assisted care safely.</h2>
+      </div>
+      <div class="product-service-layout">
+        <article class="service-feature product-feature">
+          <span class="feature-type">Product</span>
+          <h3>Faith clinical OS</h3>
+          <p>A secure workspace for AI-assisted intake, visit prep, risk review, note drafting, follow-up, and care-plan tracking. Built for psychiatrists, therapists, nurses, care coordinators, and supervised support teams.</p>
+          <div class="feature-detail-grid">
+            <div>
+              <strong>For clinicians</strong>
+              <span>Briefs, summaries, differential prompts, medication context, and note drafts before the visit starts.</span>
+            </div>
+            <div>
+              <strong>For patients</strong>
+              <span>Guided check-ins, symptom tracking, appointment prep, education, and human-reviewed escalation.</span>
+            </div>
+            <div>
+              <strong>For operations</strong>
+              <span>Queue management, care gaps, waitlist signals, documentation status, and follow-up ownership.</span>
+            </div>
+            <div>
+              <strong>For leaders</strong>
+              <span>Dashboards for access, quality, engagement, risk trends, and clinician workload.</span>
+            </div>
+          </div>
+          <ul>
+            <li>AI psychiatric intake summaries</li>
+            <li>Session briefs and draft clinical notes</li>
+            <li>Medication, symptom, and adherence timeline</li>
+            <li>Patient check-ins with escalation rules</li>
+            <li>Clinician approval queues for sensitive actions</li>
+            <li>Audit logs for safety, quality, and compliance review</li>
+          </ul>
+        </article>
+
+        <article class="service-feature">
+          <span class="feature-type">Service</span>
+          <h3>Clinic Workflow Design</h3>
+          <p>We map your existing psychiatry operations and configure copilots around the way your clinicians already work, from referral intake to billing handoff.</p>
+          <ul>
+            <li>Care pathway setup</li>
+            <li>Role-based approval workflows</li>
+            <li>Prompt and protocol configuration</li>
+            <li>Team onboarding and training</li>
+            <li>Clinical safety review sessions</li>
+            <li>Launch playbooks for pilot teams</li>
+          </ul>
+        </article>
+
+        <article class="service-feature">
+          <span class="feature-type">Service</span>
+          <h3>Custom AI Agents</h3>
+          <p>Purpose-built agents for clinics, health systems, payers, and employers that need specialized mental health automation with clear escalation boundaries.</p>
+          <ul>
+            <li>Referral triage agents</li>
+            <li>Crisis escalation assistants</li>
+            <li>Population health follow-up</li>
+            <li>Research and outcomes automation</li>
+            <li>Employer mental health navigation</li>
+            <li>Payer care-management support</li>
+          </ul>
+        </article>
+
+        <article class="service-feature">
+          <span class="feature-type">Product</span>
+          <h3>Insights Dashboard</h3>
+          <p>Operational and clinical visibility into demand, access gaps, risk trends, engagement, treatment progress, and service bottlenecks.</p>
+          <ul>
+            <li>Measurement-based care reports</li>
+            <li>Waitlist and capacity analytics</li>
+            <li>Safety escalation audit trail</li>
+            <li>Care quality and follow-up metrics</li>
+            <li>Clinician workload snapshots</li>
+            <li>Engagement and dropout risk signals</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="capability-matrix" aria-label="Detailed product capabilities">
+        <article>
+          <span>01</span>
+          <h3>Intelligent Intake</h3>
+          <p>Collects structured history, presenting concerns, prior treatments, screeners, social context, contraindications, and patient goals before the first appointment.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Visit Preparation</h3>
+          <p>Builds a concise clinical brief with recent symptom changes, medication adherence, sleep patterns, risk flags, and suggested topics for the clinician to verify.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Documentation Assist</h3>
+          <p>Drafts psychiatric notes, treatment-plan updates, follow-up instructions, and care-team tasks while preserving clinician review and final sign-off.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Between-Visit Support</h3>
+          <p>Runs safe check-ins, gathers symptom updates, routes practical barriers, and escalates concerning responses to the right human team member.</p>
+        </article>
+        <article>
+          <span>05</span>
+          <h3>Risk & Safety Routing</h3>
+          <p>Applies configurable protocols for suicidality, medication side effects, missed appointments, crisis language, and sudden deterioration.</p>
+        </article>
+        <article>
+          <span>06</span>
+          <h3>Measurement-Based Care</h3>
+          <p>Tracks PHQ-9, GAD-7, mood, sleep, functioning, adherence, and custom measures so care plans can adjust based on observed progress.</p>
+        </article>
+      </div>
+
+      <div class="implementation-panel">
+        <div>
+          <p class="eyebrow">Launch Path</p>
+          <h3>From pilot to clinic-wide deployment.</h3>
+          <p>Faith Health supports the full rollout: workflow discovery, clinical protocol configuration, staff training, supervised pilot launch, performance review, and broader deployment.</p>
+        </div>
+        <ol class="implementation-steps">
+          <li>
+            <strong>Discover</strong>
+            <span>Map current intake, visit, documentation, and follow-up workflows.</span>
+          </li>
+          <li>
+            <strong>Configure</strong>
+            <span>Set protocols, permissions, prompts, escalation rules, and reporting needs.</span>
+          </li>
+          <li>
+            <strong>Pilot</strong>
+            <span>Launch with a focused clinical team and measure workload, access, and safety outcomes.</span>
+          </li>
+          <li>
+            <strong>Scale</strong>
+            <span>Expand across service lines with quality monitoring and continuous optimization.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="product-strip" id="outcomes">
+      <div class="product-copy">
+        <p class="eyebrow">Outcomes</p>
+        <h2>Designed around affordability, access, and clinical effectiveness.</h2>
+        <p class="outcomes-lede">Faith Health reduces repetitive documentation, triages demand, and standardizes evidence-based workflows so clinics can serve more people without weakening clinical judgment.</p>
+      </div>
+      <div class="outcome-list" aria-label="Outcome pillars">
+        <div>
+          <span>Affordable</span>
+          <p>Lower visit costs by automating repetitive prep, notes, and follow-up coordination.</p>
+        </div>
+        <div>
+          <span>Accessible</span>
+          <p>Extend support across SMS, portal, and telehealth workflows for patients waiting for care.</p>
+        </div>
+        <div>
+          <span>Effective</span>
+          <p>Use measurement-based care, risk protocols, and clinician review to keep AI clinically grounded.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section clinical-section" id="clinical">
+      <div class="clinical-inner">
+        <div class="section-heading clinical-heading">
+          <p class="eyebrow">Clinical Guardrails</p>
+          <h2>AI agents that know when to assist, when to ask, and when to escalate.</h2>
+          <p>Faith Health is designed around supervised clinical use. Every agent has defined permissions, escalation rules, audit trails, and review points so AI supports care delivery without replacing licensed judgment.</p>
+        </div>
+        <div class="safety-flow" aria-label="Clinical guardrail workflow">
+          <div>
+            <span>1</span>
+            <strong>Signal detected</strong>
+            <p>Symptom deterioration, medication risk, crisis language, missed visits, or unusual engagement pattern.</p>
+          </div>
+          <div>
+            <span>2</span>
+            <strong>Protocol applied</strong>
+            <p>Configured pathways check severity, context, consent, responsible role, and required response window.</p>
+          </div>
+          <div>
+            <span>3</span>
+            <strong>Human review</strong>
+            <p>Clinicians approve sensitive outreach, treatment-plan changes, medication actions, and high-risk responses.</p>
+          </div>
+        </div>
+      </div>
+      <div class="guardrail-grid">
+        <article>
+          <span class="guardrail-icon">H</span>
+          <h3>Human-in-the-loop</h3>
+          <p>Clinicians approve treatment plans, medication changes, notes, high-risk outreach, crisis routing, and any workflow where professional judgment is required.</p>
+          <ul>
+            <li>Approval queues by role</li>
+            <li>Draft-only clinical outputs</li>
+            <li>Escalation ownership tracking</li>
+          </ul>
+        </article>
+        <article>
+          <span class="guardrail-icon">E</span>
+          <h3>Evidence-aware</h3>
+          <p>Workflows align with structured assessments, symptom scales, safety planning, measurement-based care, and clinic-approved psychiatric pathways.</p>
+          <ul>
+            <li>PHQ-9 and GAD-7 tracking</li>
+            <li>Safety-plan prompts</li>
+            <li>Protocol-specific recommendations</li>
+          </ul>
+        </article>
+        <article>
+          <span class="guardrail-icon">O</span>
+          <h3>Operationally useful</h3>
+          <p>Integrates into the psychiatric clinic day: intake queues, visit prep, documentation, billing handoff, follow-up ownership, and population health review.</p>
+          <ul>
+            <li>Queue-based task routing</li>
+            <li>Follow-up status tracking</li>
+            <li>Care-team handoff notes</li>
+          </ul>
+        </article>
+        <article>
+          <span class="guardrail-icon">P</span>
+          <h3>Privacy-first</h3>
+          <p>Built for protected health information workflows with role-based permissions, audit trails, secure handling, and implementation-specific data controls.</p>
+          <ul>
+            <li>Permissioned access</li>
+            <li>Audit-ready event logs</li>
+            <li>Secure clinical workflows</li>
+          </ul>
+        </article>
+        <article>
+          <span class="guardrail-icon">R</span>
+          <h3>Risk-tiered escalation</h3>
+          <p>Responses are routed by urgency and clinical risk, from routine follow-up to same-day review or emergency protocol activation.</p>
+          <ul>
+            <li>Configurable severity levels</li>
+            <li>Response-time windows</li>
+            <li>Responsible clinician assignment</li>
+          </ul>
+        </article>
+        <article>
+          <span class="guardrail-icon">V</span>
+          <h3>Validation & monitoring</h3>
+          <p>Teams can review AI outputs, track corrections, monitor drift, and refine prompts and protocols over time.</p>
+          <ul>
+            <li>Output review history</li>
+            <li>Quality improvement loops</li>
+            <li>Protocol performance checks</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy">
+        <p class="eyebrow">Build With Us</p>
+        <h2 id="contact-title">Bring Faith Health to your psychiatry team.</h2>
+        <p class="contact-lede">For clinics, health systems, employers, and clinical researchers building the next era of accessible mental healthcare.</p>
+      </div>
+      <form class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" placeholder="Your name">
+        </label>
+        <label>
+          Work email
+          <input type="email" name="email" autocomplete="email" placeholder="you@clinic.org">
+        </label>
+        <label>
+          Organization
+          <input type="text" name="organization" placeholder="Clinic, health system, or company">
+        </label>
+        <button class="button primary" type="submit">Request pilot access</button>
+        <p class="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Faith Health. All rights reserved.</span>
+    <span>AI copilots and agents for psychiatry.</span>
+    <nav class="footer-links" aria-label="Legal pages">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
